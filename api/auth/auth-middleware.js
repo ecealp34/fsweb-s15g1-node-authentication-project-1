@@ -10,7 +10,7 @@ const { HASH_ROUND } = require('../../config/config');
     "message": "Geçemezsiniz!"
   }
 */
-async function sinirli(req,res,next) {
+function sinirli(req,res,next) {
   try {
     if(req.session && req.session.user_id > 0) {
       next();
